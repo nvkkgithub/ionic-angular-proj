@@ -3,6 +3,8 @@ Ionic Angular Project
 
 ### Commands
 ```
+npm install -g ionic
+npm install -g cordova
 npm install
 ionic serve 
 or
