@@ -1,0 +1,198 @@
+{  
+   "contents": {  
+      "statusCode":200,
+      "statusDescription":"Success",
+      "details": {
+         "deals":[
+            {
+               "title": "Deals of the Day",
+               "mainImg": "assets/imgs/deal.jpg",
+               "items": [
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/1.jpg",
+                    "rowspan" : 3
+                  },
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/2.jpg",
+                    "rowspan" : 3
+                  },
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/3.jpg",
+                    "rowspan" : 3
+                  }
+               ]  
+            },
+            {
+               "title": "Summer Collections",
+               "mainImg": "assets/imgs/sale.jpg",
+               "items": [
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/4.jpg",
+                    "rowspan" : 3
+                  },
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/5.jpg",
+                    "rowspan" : 3
+                  },
+                  {
+                    "code" : "1",
+                    "name" : "ABC",
+                    "category":"Dresses",
+                    "brand": "XYZ",
+                    "price": "100",
+                    "imgsrc" : "assets/imgs/categories/women/6.jpg",
+                    "rowspan" : 3
+                  }
+               ]  
+            }
+         ],
+         "collections": [
+            {
+               "title": "New Collections",
+               "list":[
+                  {
+                     "label": "Abayas",
+                     "items":[
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/1.jpg",
+                          "rowspan" : 3
+                        },
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/1.jpg",
+                          "rowspan" : 3
+                        }
+                     ]
+                  },
+                  {
+                     "label": "Trendy Dresses",
+                     "items":[
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/2.jpg",
+                          "rowspan" : 3
+                        },
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/2.jpg",
+                          "rowspan" : 3
+                        }
+                     ]
+                  },
+                  {
+                     "label": "Holiday",
+                     "items":[
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/3.jpg",
+                          "rowspan" : 3
+                        },
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/3.jpg",
+                          "rowspan" : 3
+                        }
+                     ]
+                  },
+                  {
+                     "label": "Shirts",
+                     "items":[
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/4.jpg",
+                          "rowspan" : 3
+                        },
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/4.jpg",
+                          "rowspan" : 3
+                        }
+                     ]
+                  },
+                  {
+                     "label": "Watches",
+                     "items":[
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/5.jpg",
+                          "rowspan" : 3
+                        },
+                        {
+                          "code" : "1",
+                          "name" : "ABC",
+                          "category":"Dresses",
+                          "brand": "XYZ",
+                          "price": "100",
+                          "imgsrc" : "assets/imgs/categories/women/5.jpg",
+                          "rowspan" : 3
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }  
+   }
+}

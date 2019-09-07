@@ -1,0 +1,176 @@
+{
+  "contents": {
+    "statusCode": 200,
+    "statusDescription": "Success",
+    "SiteData": {
+      "Price": {
+        "lower": 0,
+        "upper": 2000
+      },
+      "Categories": [
+        {
+          "id": "1",
+          "name": "Regular",
+          "code": "CAT_DRESSES",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "2",
+          "name": "College",
+          "code": "CAT_COLLG",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "3",
+          "name": "Partywear",
+          "code": "CAT_PARTY",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "4",
+          "name": "Officewear",
+          "code": "CAT_OFFICE",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "5",
+          "name": "Nightwear",
+          "code": "CAT_NIGHTWR",
+          "active": "Y",
+          "selected": false
+        }
+      ],
+      "Brands": [
+        {
+          "id": "1",
+          "name": "Zmurud",
+          "code": "BRN_ZMURUD",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "2",
+          "name": "Diva London",
+          "code": "BRN_DVLNDN",
+          "active": "Y"
+        },
+        {
+          "id": "3",
+          "name": "Tommy Hilfiger",
+          "code": "CAT_TMHLFG",
+          "active": "Y",
+          "selected": false
+        }
+      ],
+      "Sizes": [
+        {
+          "id": "1",
+          "name": "Small",
+          "code": "SZE_SML",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "2",
+          "name": "Medium",
+          "code": "SZE_MDM",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "3",
+          "name": "Large",
+          "code": "SZE_LRG",
+          "active": "Y",
+          "selected": false
+        }
+      ],
+      "Colors": [
+        {
+          "id": "1",
+          "name": "Black",
+          "code": "CLR_BLK",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "2",
+          "name": "Blue",
+          "code": "CLR_BLU",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "3",
+          "name": "White",
+          "code": "CLR_WHT",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "4",
+          "name": "Grey",
+          "code": "CLR_GRY",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "5",
+          "name": "Pink",
+          "code": "CLR_PNK",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "6",
+          "name": "Red",
+          "code": "CLR_RED",
+          "active": "Y",
+          "selected": false
+        }
+      ],
+      "SelSortBy" : "SRT_BSTMTCH",
+      "SortByFields": [
+        {
+          "id": "1",
+          "name": "Best Match",
+          "code": "SRT_BSTMTCH",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "2",
+          "name": "Popularity",
+          "code": "SRT_POPLRTY",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "3",
+          "name": "Top Rated",
+          "code": "SRT_TPRTD",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "4",
+          "name": "Price: Low to High",
+          "code": "SRT_PRCLTH",
+          "active": "Y",
+          "selected": false
+        },
+        {
+          "id": "5",
+          "name": "Price: High to Low",
+          "code": "SRT_PRCHTL",
+          "active": "Y",
+          "selected": false
+        }
+      ]
+    }
+  }
+}

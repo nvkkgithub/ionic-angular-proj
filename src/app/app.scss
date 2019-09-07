@@ -14,3 +14,31 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+  .redBorder {
+  	border: 1px solid color($colors, danger);
+  }
+
+  .noBorder {
+  	border: 0px !important;
+  }
+
+  .lightBorder {
+  	border: 1px solid color($colors, light-grey);
+  }
+
+  .greyBorder {
+    border: 1px solid color($colors, medium-grey);
+  }	
+
+  @media screen and (max-width: 767px) {
+    .hidden-sm {
+        display:none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .hidden-md {
+        display:none;
+    }
+  }

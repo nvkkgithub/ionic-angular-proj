@@ -1,0 +1,137 @@
+{  
+   "contents":{  
+   "statusCode":200,
+   "statusDescription":"Success",
+   "HomePageDtls":[  
+      	{  
+         "category":"WOMEN",
+         "name" : "Women",
+         "categoryItems": [{
+         	"type" : "ABHAYAS",
+         	"name" : "Abhayas",
+         	"items" : [
+         		{
+         			"code" : "1",
+         			"name" : "Cloths",
+         			"imgsrc" : "assets/imgs/categories/women/1.jpg",
+         			"rowspan" : 2
+         		},
+         		{
+         			"code" : "2",
+         			"name" : "Bags",
+         			"imgsrc" : "assets/imgs/categories/women/2.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "3",
+         			"name" : "Footwear",
+         			"imgsrc" : "assets/imgs/categories/women/3.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "4",
+         			"name" : "Eyewear",
+         			"imgsrc" : "assets/imgs/categories/women/4.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "5",
+         			"name" : "Watches",
+         			"imgsrc" : "assets/imgs/categories/women/5.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "6",
+         			"name" : "Beauty",
+         			"imgsrc" : "assets/imgs/categories/women/6.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "8",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/categories/women/8.jpg",
+         			"rowspan" : 1
+         		}
+
+         	]
+         }
+     	]
+      },
+
+      {  
+         "category":"MEN",
+         "name" : "Men",
+         "categoryItems": [{
+         	"type" : "DRESSES",
+         	"name" : "Dresses",
+         	"items" : [
+         		{
+         			"code" : "1",
+         			"name" : "Roza",
+         			"imgsrc" : "assets/imgs/categories/men/1.jpg",
+         			"rowspan" : 2
+         		},
+         		{
+         			"code" : "2",
+         			"name" : "Sara Arabia",
+         			"imgsrc" : "assets/imgs/categories/men/2.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "3",
+         			"name" : "Tresors",
+         			"imgsrc" : "assets/imgs/categories/men/3.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "4",
+         			"name" : "Gunay Hafiz",
+         			"imgsrc" : "assets/imgs/categories/men/4.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "5",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/categories/men/5.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "6",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/categories/men/6.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "7",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/categories/men/7.jpg",
+         			"rowspan" : 1
+         		},
+
+         		{
+         			"code" : "8",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/categories/men/8.jpg",
+         			"rowspan" : 1
+         		}
+
+         	]
+         }
+     	]
+      }
+   ]
+}
+
+
+}
+

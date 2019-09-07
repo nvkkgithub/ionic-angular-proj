@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Items</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding  padding *ngIf = " itemslist && sitedata " >
+<br/><br/>
+
+<ion-grid>
+    
+    <ion-row>  
+     
+      <ion-col col-md-3 showWhen="landscape">
+        
+        <ion-list>
+        
+          <ion-list-header>Categories</ion-list-header>
+          
+          <ion-item *ngFor="let catg of sitedata.SiteData.Categories">
+             <ion-label>{{catg.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{catg.selected}}"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list>
+
+        <ion-list>
+        
+          <ion-list-header>Brands</ion-list-header>
+          
+          <ion-item *ngFor="let brnd of sitedata.SiteData.Brands">
+             <ion-label>{{brnd.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{brnd.selected}}"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list>
+
+        <ion-list>
+            <ion-list-header>Price</ion-list-header>
+            <ion-item>
+              <ion-range dualKnobs="true" min="0" max="2000" step="10" snaps="true" [(ngModel)]="sitedata.SiteData.Price" >
+              </ion-range>
+            </ion-item>
+        </ion-list>        
+      
+        <ion-list>
+        
+          <ion-list-header>Sizes</ion-list-header>
+          
+          <ion-item *ngFor="let sze of sitedata.SiteData.Sizes">
+             <ion-label>{{sze.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{sze.selected}}"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list> 
+
+        <ion-list>
+        
+          <ion-list-header>Colors</ion-list-header>
+          
+          <ion-item *ngFor="let clr of sitedata.SiteData.Colors">
+             <ion-label>{{clr.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{clr.selected}}"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list> 
+
+      </ion-col>
+
+      <ion-col col-md-9 col-sm-12>
+        <ion-row>
+          <ion-col item-start>
+            <h5>Women (40 items found)</h5>
+          </ion-col>
+          <ion-col item-end>
+            <ion-item> 
+              <ion-label>Sort By</ion-label>
+              <ion-select [(ngModel)]="sitedata.SiteData.SelSortBy">
+                <ion-option *ngFor=" let srtby of sitedata.SiteData.SortByFields;let j = index " value="{{srtby.code}}">{{srtby.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>  
+        </ion-row>  
+
+        <ion-row  *ngFor="let itms of itemslist.CategoryItems; let i = index ">
+          
+            <ion-col col-md-4 col-sm-6 col-xs-12  *ngFor=" let item of itms.items;let j = index ">
+
+              <ion-card (mouseover)="updateMouseOverFlag(item,true)" 
+              (mouseout)="updateMouseOverFlag(item,false)">
+            
+                <img src="{{item.imgsrc}}" [ngClass]="getDynamicNgClass(item)" />
+            
+                 <ion-row *ngIf="showItemQuickView(item)"> 
+                    <ion-col *ngFor="let sz of item.sizes">
+                      <ion-badge>{{sz}}</ion-badge>
+                    </ion-col>
+                 </ion-row> 
+                
+                <ion-card-content>
+                  <ion-card-title>
+                    <ion-row>
+                      <ion-col item-start>{{item.name}}</ion-col>
+                      <ion-col item-end *ngIf="item.rating != 'NA'">
+                      <rating [(ngModel)]="item.rating" halfStarIconName="star-half" starIconName="star" nullable="true" (ngModelChange)="onModelChange($event)"></rating>
+                      </ion-col>
+                    </ion-row>
+                    
+                      
+                  </ion-card-title>
+                  <div>
+                    {{item.brief}}
+                  </div>
+                  <h3 class="price_tag"><span *ngIf="item.price.was > 0">Now</span> {{item.price.now}}{{item.price.currency}} <s class="price_tag_small" *ngIf="item.price.was > 0">Was {{item.price.was}}{{item.price.currency}} </s></h3>
+                </ion-card-content>
+
+
+              </ion-card>
+            </ion-col>
+
+          </ion-row>
+
+
+      </ion-col>
+
+      </ion-row>
+
+  </ion-grid>
+  
+  <button ion-button secondary (click)="filterBySelection()">Filter</button> 
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+
+
+</ion-content>

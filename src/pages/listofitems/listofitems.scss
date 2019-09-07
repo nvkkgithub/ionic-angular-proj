@@ -1,0 +1,58 @@
+page-listofitems {
+
+	ion-card img {
+	  width: auto !important;
+	}
+
+	img.desaturate {
+		opacity: 0.5;
+	}
+
+	.desaturate_ion_card{
+		background-color: #eae5e5 !important;
+	}
+	.default_bg_ion_card{
+		background-color: #fff !important;
+	}
+
+	.show{
+		display : visible !important;
+	}
+	.hide{
+		display : hidden !important;
+	}
+
+	.price_tag {
+		color:red !important;
+		font-weight: bold;
+	}
+	.price_tag_small{
+		font-size: 1rem !important;
+		color: blue;
+	}
+
+
+	ul {
+	  padding: 0px;
+	 
+	  &.rating li {
+	    padding: 2px 3px !important;
+	    background: none;
+	    color: #ffb400;
+	 
+	    ion-icon {
+	      font-size: 15px !important;
+	    }
+	  }
+	}
+
+	.card-title-md{
+		font-size: 1.7rem !important;
+		padding : 2px 0px !important;
+		line-height: 1 !important;
+	}
+
+	.col {
+		padding: 1px !important;
+	}
+}

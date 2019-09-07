@@ -3,16 +3,44 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-row>
+      <ion-col col-4>
+        <h4>ABY</h4>
+      </ion-col>
+      <ion-col col-8>
+        <ion-searchbar align-items-end></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="card-background-page" padding *ngIf="homecontents" >
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  
+  <ion-grid class="card-background-page" *ngFor="let hmpg of homecontents.HomePageDtls; let i = index ">
+  <ion-row col-12>
+    <h5>{{hmpg.name}}</h5>
+  </ion-row>
 
+  <ion-row>
+    <ion-col col-12 *ngFor="let ctg of hmpg.categoryItems; let j = index">
+      <ion-row>
+        <ion-col col-4  *ngFor="let item of ctg.items; let k = index ">
+
+        <ion-card (click)="goToListOfItemsPage(ctg)">
+          <img src="{{item.imgsrc}}" />
+          <div align-self-center class="card-title">{{item.name}}</div>
+        </ion-card>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  
+  </ion-grid>
+  
+  
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

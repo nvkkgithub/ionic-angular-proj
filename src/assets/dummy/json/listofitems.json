@@ -1,0 +1,253 @@
+{  
+   "contents":{  
+   "statusCode":200,
+   "statusDescription":"Success",
+   "CategoryItems":[  
+      	{ 
+          "items" : [
+         		{
+         			"code" : "1",
+         			"name" : "Roza",
+         			"imgsrc" : "assets/imgs/listofitems/1.jpg",
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M", "L", "XL"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 400.00,
+         				"currency" : "AED"
+         			},
+                  "rating" : "4",
+                  "mouseover" : "false"
+         		},
+         		{
+         			"code" : "2",
+         			"name" : "Sara Arabia",
+         			"imgsrc" : "assets/imgs/listofitems/2.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M", "L", "XL"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 0,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "3",
+         			"name" : "Tresors De Mini",
+         			"imgsrc" : "assets/imgs/listofitems/3.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M", "L"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 0,
+         				"currency" : "AED"
+         			},
+                  "rating" : "3",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "4",
+         			"name" : "Gunay Hafiz",
+         			"imgsrc" : "assets/imgs/listofitems/4.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 400.00,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "5",
+         			"name" : "Aara",
+         			"imgsrc" : "assets/imgs/listofitems/5.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 400.00,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "6",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/listofitems/6.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 0,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "8",
+         			"name" : "MST",
+         			"imgsrc" : "assets/imgs/listofitems/8.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M", "L"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 0,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		},
+
+         		{
+         			"code" : "8",
+         			"name" : "Faradje",
+         			"imgsrc" : "assets/imgs/listofitems/8.jpg",
+         			"rowspan" : 1,
+         			"brief" : "Lorem epsum Lorem epsum Lorem epsum..",
+         			"sizes" : ["S", "M"],
+         			"colors" : [
+         				{
+         				  "code" : "red",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "blue",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				},
+         				{
+         				  "code" : "yellow",
+         				  "imgsrc" : "assets/imgs/listofitems/1.jpg"
+         				}
+         			],
+         			"price" : {
+         				"now" : 199.00,
+         				"was" : 0,
+         				"currency" : "AED"
+         			},
+                  "rating" : "NA",
+                  "mouseover" : "false"
+         		}
+
+         	]
+      }
+   ]
+}
+
+
+}
+

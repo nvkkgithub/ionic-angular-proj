@@ -23,6 +23,13 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 420px,     
+  md: 768px,
+  lg: 1024px
+);
+
 
 
 // Named Color Variables
@@ -37,8 +44,10 @@ $colors: (
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  light:      #f4f4f4, 
+  dark:       #222,	   
+  light-grey: #9E9D9B,	
+  medium-grey: #5B5A59,
 );
 
 
@@ -86,3 +95,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+

@@ -1,0 +1,219 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-row>
+      <ion-col col-4>
+        <h4>Items</h4>
+      </ion-col>
+      <ion-col col-8>
+        <ion-searchbar align-items-end></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding  padding *ngIf = " itemslist && sitedata " >
+<br/><br/><br/>
+
+<ion-grid>
+    
+    <ion-row>  
+      <ion-col col-md-3 showWhen="landscape">
+        <ion-list>
+          <ion-list-header>Categories</ion-list-header>
+          <ion-item *ngFor="let catg of sitedata.SiteData.Categories">
+             <ion-label>{{catg.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{catg.selected}}"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>Brands</ion-list-header>
+          <ion-item *ngFor="let brnd of sitedata.SiteData.Brands">
+             <ion-label>{{brnd.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{brnd.selected}}"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-list-header>Price</ion-list-header>
+            <ion-row>
+                <ion-col col-4>
+                  <ion-input [(ngModel)]="sitedata.SiteData.Price.lower" disabled="true"></ion-input>
+                </ion-col>
+                <ion-col col-4>
+                  <ion-input value="-" readonly="true"></ion-input>
+                </ion-col>
+                <ion-col col-4>
+                  <ion-input [(ngModel)]="sitedata.SiteData.Price.upper"  disabled="true" ></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+              <ion-col>
+                <ion-range dualKnobs="true" min="0" max="2000" step="10" snaps="true" [(ngModel)]="sitedata.SiteData.Price" >
+                </ion-range>
+              </ion-col>
+            </ion-row>
+        </ion-list>        
+      
+        <ion-list>
+          <ion-list-header>Sizes</ion-list-header>
+          <ion-item *ngFor="let sze of sitedata.SiteData.Sizes">
+             <ion-label>{{sze.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{sze.selected}}"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list> 
+
+        <ion-list>
+          <ion-list-header>Colors</ion-list-header>
+          <ion-item *ngFor="let clr of sitedata.SiteData.Colors">
+             <ion-label>{{clr.name}}</ion-label>
+             <ion-checkbox color="dark" checked="{{clr.selected}}"></ion-checkbox>
+          </ion-item>
+        </ion-list> 
+
+      </ion-col>
+
+      <ion-col col-md-9 col-sm-12>
+        <ion-row>
+          <ion-col item-start>
+            <span class="items_results_heading">Women (40 items found)</span>
+          </ion-col>
+          <ion-col item-end>
+            <ion-item> 
+              <ion-label>Sort By</ion-label>
+              <ion-select [(ngModel)]="sitedata.SiteData.SelSortBy">
+                <ion-option *ngFor=" let srtby of sitedata.SiteData.SortByFields;let j = index " value="{{srtby.code}}">{{srtby.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>  
+        </ion-row>
+
+
+        <ion-card showWhen="portrait">
+          <div padding>
+              <ion-segment [(ngModel)]="filterSegmSelectd">
+                <ion-segment-button value="Categories">
+                  Categories
+                </ion-segment-button>
+                <ion-segment-button value="Brands">
+                  Brands
+                </ion-segment-button>
+                <ion-segment-button value="Price">
+                  Price
+                </ion-segment-button>
+                <ion-segment-button value="Sizes">
+                  Sizes
+                </ion-segment-button>
+                <ion-segment-button value="Colors">
+                  Colors
+                </ion-segment-button>
+              </ion-segment>  
+          </div>
+          <div [ngSwitch]="filterSegmSelectd">
+            <ion-row *ngSwitchCase="'Categories'">
+              <ion-col col-md-2 col-xs-4 *ngFor="let catg of sitedata.SiteData.Categories">
+                <ion-item>
+                   <ion-label>{{catg.name}}</ion-label>
+                   <ion-checkbox color="dark" checked="{{catg.selected}}"></ion-checkbox>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngSwitchCase="'Brands'">
+              <ion-col col-md-2 col-xs-4 *ngFor="let brnd of sitedata.SiteData.Brands">
+                <ion-item>
+                   <ion-label>{{brnd.name}}</ion-label>
+                   <ion-checkbox color="dark" checked="{{brnd.selected}}"></ion-checkbox>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngSwitchCase="'Price'">
+                <ion-col col-2>
+                  <ion-input [(ngModel)]="sitedata.SiteData.Price.lower" disabled="true"></ion-input>
+                </ion-col>
+                <ion-col col-2>
+                  <ion-input value="-" readonly="true"></ion-input>
+                </ion-col>
+                <ion-col col-2>
+                  <ion-input [(ngModel)]="sitedata.SiteData.Price.upper"  disabled="true" ></ion-input>
+                </ion-col>
+                <ion-col col-4>
+                  <ion-range dualKnobs="true" min="0" max="2000" step="10" snaps="true" [(ngModel)]="sitedata.SiteData.Price" >
+                  </ion-range>
+                </ion-col>
+                <ion-col col-2>
+                <button ion-button color="danger" (click)="filterBySelection()">Apply</button>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngSwitchCase="'Sizes'">
+              <ion-col col-md-2 col-xs-4 *ngFor="let sze of sitedata.SiteData.Sizes">
+                <ion-item>
+                   <ion-label>{{sze.name}}</ion-label>
+                   <ion-checkbox color="dark" checked="{{sze.selected}}"></ion-checkbox>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngSwitchCase="'Colors'">
+              <ion-col col-md-2 col-xs-4 *ngFor="let clr of sitedata.SiteData.Colors">
+                <ion-item>
+                   <ion-label>{{clr.name}}</ion-label>
+                   <ion-checkbox color="dark" checked="{{clr.selected}}"></ion-checkbox>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card>
+
+        
+        <ion-row  *ngFor="let itms of itemslist.CategoryItems; let i = index ">
+            
+            <ion-col col-md-4 col-sm-6 col-xs-12  *ngFor=" let item of itms.items;let j = index ">
+
+              <ion-card (mouseover)="updateMouseOverFlag(item,true)" 
+              (mouseout)="updateMouseOverFlag(item,false)"
+              [ngClass]="getDynamicNgClass(item)">
+                <ion-row padding>
+                  <ion-col col-xs-12 col-sm-6 col-md-4>
+                    <img src="{{item.imgsrc}}" />
+                  </ion-col>
+                  <ion-col  col-xs-12 col-sm-6 col-md-4>
+                    <h5>{{item.name}}</h5>
+                    <div>
+                      <span class="price_tag">
+                      {{item.price.now}}{{item.price.currency}}
+                      </span>
+                      <s class="price_tag_small" *ngIf="item.price.was > 0 " >Was {{item.price.was}}{{item.price.currency}} </s>
+                    </div>
+                    <div>
+                      <rating [(ngModel)]="item.rating" halfStarIconName="star-half" starIconName="star" nullable="true" (ngModelChange)="onModelChange($event)"></rating>
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row item-start [ngClass]="getCssClassForQuickView(item)"> 
+                    <ion-col *ngFor="let sz of item.sizes">
+                      <ion-badge>{{sz}}</ion-badge>
+                    </ion-col>
+                 </ion-row> 
+
+                <ion-card-content>
+                  <ion-row>
+                    <ion-col>{{item.brief}}</ion-col>
+                  </ion-row>
+                  
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+      </ion-row>
+
+  </ion-grid>
+  
+  <button ion-button secondary (click)="filterBySelection()">Filter</button> 
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+
+
+</ion-content>

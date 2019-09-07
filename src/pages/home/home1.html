@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      ABY
+    </ion-title>
+    <ion-buttons end class="noBorder" style="width: 60%;">
+      <button class="hidden-sm" style="padding: 0px; width: 80%;">
+         <ion-searchbar align-items-end></ion-searchbar>
+      </button>
+      <button ion-button icon-only (click)="openSearch()" class="hidden-md">
+        <ion-icon name="search"></ion-icon>
+      </button>
+
+      <button ion-button (click)="openLogin()" class="hidden-sm">
+        Login <ion-icon name="contact"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="openLogin()" class="hidden-md">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+
+      <button ion-button icon-only (click)="openCart()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding *ngIf="homecontents">
+  <!-- Deals -->
+  <ion-grid no-padding class="noBorder"
+    *ngIf="homecontents.details.deals">
+    <ion-slides class="noBorder" autoplay="2000" effect="coverflow" pager="true" speed="500">
+      <ion-slide *ngFor="let d of homecontents.details.deals">
+        <ion-card>
+            <img *ngIf="d.mainImg" src="{{d.mainImg}}" />
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-grid>
+
+  <!-- Collections in xs -->
+  <ion-grid no-padding class="noBorder, hidden-md" 
+    *ngFor="let c of homecontents.details.collections">
+    <ion-row padding col-12 class="noBorder header">
+        {{c.title}}
+    </ion-row>
+    <ion-slides class="noBorder" autoplay="2000" effect="coverflow" pager="true" speed="500">
+      <ion-slide *ngFor="let l of c.list">
+          <ion-card (click)="goToListOfItemsPage(l.items)">
+              <img src="{{l.items[0].imgsrc}}" /> 
+              <div class="card-title">{{l.label}} </div> 
+          </ion-card> 
+      </ion-slide>
+    </ion-slides>
+  </ion-grid>
+
+  <!-- Collections in md -->
+  <ion-grid no-padding col-md-12  class="noBorder, hidden-sm"
+    *ngIf="homecontents.details.collections">
+     <ion-row class="noBorder"
+        *ngFor="let c of homecontents.details.collections">
+        <ion-row padding col-12 class="noBorder header">
+            {{c.title}}
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col no-padding col-12 col-lg-6>
+           <ion-card (click)="goToListOfItemsPage(c.list[0].items)">
+                <img src="{{c.list[0].items[0].imgsrc}}" /> 
+                <div class="card-title">{{c.list[0].label}} </div> 
+            </ion-card>  
+          </ion-col>
+          <ion-col no-padding col-6 col-lg-3>
+            <ion-row>
+              <ion-card (click)="goToListOfItemsPage(c.list[1].items)">
+                <img src="{{c.list[1].items[0].imgsrc}}" />
+                <div class="card-title">{{c.list[1].label}} </div>
+              </ion-card>  
+            </ion-row>
+            <ion-row>
+              <ion-card (click)="goToListOfItemsPage(c.list[2].items)">
+                <img src="{{c.list[2].items[0].imgsrc}}" />
+                <div class="card-title">{{c.list[2].label}} </div> 
+              </ion-card>  
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-6 col-lg-3>
+            <ion-row>
+              <ion-card (click)="goToListOfItemsPage(c.list[3].items)">
+                <img src="{{c.list[3].items[0].imgsrc}}" />
+                <div class="card-title">{{c.list[3].label}} </div>
+              </ion-card>  
+            </ion-row>
+            <ion-row>
+              <ion-card (click)="goToListOfItemsPage(c.list[4].items)">
+               <img src="{{c.list[4].items[0].imgsrc}}" />
+                <div class="card-title">{{c.list[4].label}} </div>
+              </ion-card>  
+            </ion-row>
+          </ion-col>
+      </ion-row>
+     </ion-row>
+  </ion-grid>
+  
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
